@@ -1,0 +1,22 @@
+<svg width="200" height="200" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background circle -->
+  <circle cx="100" cy="100" r="100" fill="#4a6fa5"/>
+  
+  <!-- Head -->
+  <circle cx="100" cy="85" r="40" fill="#f8f9fa"/>
+  
+  <!-- Body -->
+  <path d="M60,140 Q100,180 140,140" fill="#f8f9fa"/>
+  
+  <!-- Eyes -->
+  <circle cx="85" cy="75" r="5" fill="#333"/>
+  <circle cx="115" cy="75" r="5" fill="#333"/>
+  
+  <!-- Smile -->
+  <path d="M80,100 Q100,120 120,100" stroke="#333" stroke-width="3" fill="transparent"/>
+  
+  <!-- Teacher-specific elements: glasses -->
+  <circle cx="85" cy="75" r="10" fill="transparent" stroke="#333" stroke-width="2"/>
+  <circle cx="115" cy="75" r="10" fill="transparent" stroke="#333" stroke-width="2"/>
+  <line x1="95" y1="75" x2="105" y2="75" stroke="#333" stroke-width="2"/>
+</svg>

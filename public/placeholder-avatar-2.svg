@@ -1,0 +1,21 @@
+<svg width="200" height="200" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background circle -->
+  <circle cx="100" cy="100" r="100" fill="#e63946"/>
+  
+  <!-- Head -->
+  <circle cx="100" cy="85" r="40" fill="#f8f9fa"/>
+  
+  <!-- Body -->
+  <path d="M60,140 Q100,180 140,140" fill="#f8f9fa"/>
+  
+  <!-- Eyes -->
+  <circle cx="85" cy="75" r="5" fill="#333"/>
+  <circle cx="115" cy="75" r="5" fill="#333"/>
+  
+  <!-- Smile -->
+  <path d="M80,100 Q100,120 120,100" stroke="#333" stroke-width="3" fill="transparent"/>
+  
+  <!-- Student-specific elements: backpack -->
+  <rect x="70" y="120" width="60" height="40" rx="5" ry="5" fill="#2a9d8f"/>
+  <rect x="90" y="110" width="20" height="10" rx="2" ry="2" fill="#2a9d8f"/>
+</svg>

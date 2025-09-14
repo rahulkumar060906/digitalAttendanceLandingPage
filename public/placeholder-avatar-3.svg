@@ -1,0 +1,21 @@
+<svg width="200" height="200" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background circle -->
+  <circle cx="100" cy="100" r="100" fill="#2a9d8f"/>
+  
+  <!-- Head -->
+  <circle cx="100" cy="85" r="40" fill="#f8f9fa"/>
+  
+  <!-- Body -->
+  <path d="M60,140 Q100,180 140,140" fill="#f8f9fa"/>
+  
+  <!-- Eyes -->
+  <circle cx="85" cy="75" r="5" fill="#333"/>
+  <circle cx="115" cy="75" r="5" fill="#333"/>
+  
+  <!-- Smile -->
+  <path d="M80,100 Q100,120 120,100" stroke="#333" stroke-width="3" fill="transparent"/>
+  
+  <!-- Principal-specific elements: tie -->
+  <path d="M100,110 L90,140 L100,170 L110,140 L100,110" fill="#e9c46a"/>
+  <rect x="85" y="110" width="30" height="10" rx="2" ry="2" fill="#e9c46a"/>
+</svg>
