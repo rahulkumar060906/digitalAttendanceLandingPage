@@ -1,44 +1,33 @@
 import React from 'react';
+import useAOS from '../../hooks/useAOS';
 
 const PromiseSection = () => {
+  useAOS();
   return (
-    <section className="py-16 px-4 bg-gray-900">
-      <div className="container mx-auto max-w-6xl">
-        <h2 className="text-3xl md:text-4xl font-bold mb-12 text-center bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-cyan-300">
-          <span className="text-blue-400">👉</span> Ye sirf attendance nahi, ek fair aur fast system hai.
+    <section className="py-10 px-2 sm:px-4 text-blue-900 bg-blue-50">
+      <div className="container mx-auto max-w-6xl bg-white p-4 sm:p-8 rounded-2xl shadow-xl border-2 border-blue-200 my-6" data-aos="fade-up">
+        <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-8 sm:mb-12 text-center bg-clip-text text-transparent bg-gradient-to-r from-blue-800 to-cyan-500">
+          <span className="text-blue-700 text-4xl">🤝</span> This is not just attendance, it's a fair and fast system.
         </h2>
-        
-        <div className="grid md:grid-cols-3 gap-8">
-          <div className="bg-gray-800 p-8 rounded-xl shadow-md hover:shadow-blue-500/20 border border-blue-500/30 hover:scale-105 transition-all blue-glow">
-            <div className="bg-blue-900/50 p-4 rounded-full w-16 h-16 flex items-center justify-center mb-6">
-              <svg xmlns="http://www.w3.org/2000/svg" className="h-8 w-8 text-blue-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
-              </svg>
-            </div>
-            <h3 className="text-xl font-bold mb-3 text-blue-300">Faculty ke liye</h3>
-            <p className="text-gray-300">Freedom from registers & manual checking.</p>
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 sm:gap-8" data-aos="fade-up" data-aos-delay="100">
+          <div className="bg-blue-50 p-8 rounded-xl shadow-md hover:shadow-xl border-2 border-blue-100 hover:scale-105 transition-all flex flex-col items-center">
+            <span className="text-5xl mb-4" aria-label="Faculty">👨‍🏫</span>
+            <h3 className="text-xl font-bold mb-3 text-blue-800">For Faculty</h3>
+            <p className="text-blue-900 text-center">Freedom from registers and manual checking.</p>
           </div>
-          
-          <div className="bg-gray-800 p-8 rounded-xl shadow-md hover:shadow-blue-500/20 border border-blue-500/30 hover:scale-105 transition-all blue-glow">
-            <div className="bg-blue-900/50 p-4 rounded-full w-16 h-16 flex items-center justify-center mb-6">
-              <svg xmlns="http://www.w3.org/2000/svg" className="h-8 w-8 text-blue-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z" />
-              </svg>
-            </div>
-            <h3 className="text-xl font-bold mb-3 text-blue-300">Students ke liye</h3>
-            <p className="text-gray-300">Assurance that presence truly matters.</p>
+          <div className="bg-blue-50 p-8 rounded-xl shadow-md hover:shadow-xl border-2 border-blue-100 hover:scale-105 transition-all flex flex-col items-center">
+            <span className="text-5xl mb-4" aria-label="Student">🧑‍🎓</span>
+            <h3 className="text-xl font-bold mb-3 text-blue-800">For Students</h3>
+            <p className="text-blue-900 text-center">Assurance that your presence truly matters.</p>
           </div>
-          
-          <div className="bg-gray-800 p-8 rounded-xl shadow-md hover:shadow-blue-500/20 border border-blue-500/30 hover:scale-105 transition-all blue-glow">
-            <div className="bg-blue-900/50 p-4 rounded-full w-16 h-16 flex items-center justify-center mb-6">
-              <svg xmlns="http://www.w3.org/2000/svg" className="h-8 w-8 text-blue-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
-              </svg>
-            </div>
-            <h3 className="text-xl font-bold mb-3 text-blue-300">Institutions ke liye</h3>
-            <p className="text-gray-300">Eco-friendly, modern aur future-ready solution.</p>
+          <div className="bg-blue-50 p-8 rounded-xl shadow-md hover:shadow-xl border-2 border-blue-100 hover:scale-105 transition-all flex flex-col items-center">
+            <span className="text-5xl mb-4" aria-label="Institution">🏢</span>
+            <h3 className="text-xl font-bold mb-3 text-blue-800">For Institutions</h3>
+            <p className="text-blue-900 text-center">Eco-friendly, modern, and future-ready solution.</p>
           </div>
         </div>
+        {/* Soft shadow for depth */}
+        <div className="absolute inset-0 pointer-events-none z-0" style={{ boxShadow: '0 0 120px 40px #a7f3d0, 0 0 80px 20px #bfdbfe' }}></div>
       </div>
     </section>
   );

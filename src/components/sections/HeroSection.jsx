@@ -1,47 +1,42 @@
-import React from 'react';
-import { FaArrowRight } from 'react-icons/fa';
+import React, { Suspense, useRef, useMemo, useState } from "react";
+import useAOS from '../../hooks/useAOS';
 
-const HeroSection = () => {
+export default function HeroSection(props) {
+  useAOS();
   return (
-    <section className="relative overflow-hidden py-16 px-4 md:py-18 text-gray-100">
-      <div className="container mx-auto max-w-6xl">
-        <div className="flex flex-col md:flex-row items-center justify-between gap-12 relative z-10">
-          <div className="md:w-1/2 fade-in" data-aos="fade-right">
-            <h1 className="text-4xl md:text-5xl font-bold mb-6 bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-cyan-300 animated-gradient-text">
-              <span className="text-blue-400">👉</span> Class ka time padhai ke liye hona chahiye, attendance ke liye nahi.
-            </h1>
-            
-            <div className="mb-8 text-lg text-gray-300">
-              <p className="mb-3">Har lecture ki shuruaat me minutes waste ho jaate hain. Kabhi roll call, kabhi register.</p>
-              <p className="mb-3">Badi classes me toh queue lag jaati hai. Students bore ho jaate hain, aur learning peeche reh jaati hai.</p>
-              <p className="mb-3">Proxy attendance bhi ek problem hai. System purana lagta hai.</p>
-            </div>
-            
-            <p className="text-xl font-medium mb-8 text-blue-400">Attendance ka process simple hona chahiye — bas show up and mark.</p>
-            
-            <div className="flex flex-wrap gap-4">
-              <button className="bg-gradient-to-r from-blue-600 to-cyan-500 hover:from-blue-700 hover:to-cyan-600 text-white font-bold py-3 px-6 rounded-lg flex items-center gap-2 transition-all shadow-lg hover-scale blue-glow">
-                Join the Change <FaArrowRight />
-              </button>
-              <button className="bg-gray-800/50 backdrop-blur-sm hover:bg-gray-700/60 border border-blue-500/30 text-blue-400 py-3 px-6 rounded-lg flex items-center gap-2 transition-all shadow-md hover-scale blue-glow">
-                See How It Works
-              </button>
-            </div>
-          </div>
-          
-          <div className="md:w-1/2 slide-up" data-aos="fade-left" data-aos-delay="200">
-            <div className="bg-gray-800/40 backdrop-blur-md p-8 rounded-2xl shadow-[0_8px_32px_0_rgba(59,130,246,0.25)] border border-blue-500/30">
-              <img 
-                src="/placeholder-attendance-problem.svg" 
-                alt="Attendance Problem Illustration" 
-                className="w-full h-auto drop-shadow-lg"
-              />
-            </div>
-          </div>
+    <div className="relative min-h-screen flex flex-col md:flex-row items-center justify-between px-4 sm:px-6 lg:px-20 bg-gradient-to-br from-blue-50 via-white to-cyan-100 text-gray-900 overflow-hidden">
+      {/* Animated Background Shapes */}
+      <div className="absolute top-0 left-0 w-2/3 sm:w-1/2 h-1/2 bg-gradient-to-br from-blue-300 to-cyan-200 rounded-full blur-3xl opacity-30 animate-pulse" style={{ zIndex: 0 }}></div>
+      <div className="absolute bottom-0 right-0 w-1/2 sm:w-1/3 h-1/3 bg-gradient-to-br from-cyan-300 to-blue-200 rounded-full blur-2xl opacity-20 animate-pulse" style={{ zIndex: 0 }}></div>
+      {/* Left Content */}
+      <div className="w-full max-w-xl space-y-6 text-center md:text-left md:mr-12 z-10" data-aos="fade-up">
+        <h1 className="text-4xl sm:text-5xl md:text-6xl font-extrabold leading-tight">
+          Futuristic <span className="text-blue-500">Attendance</span> System
+        </h1>
+        <p className="text-base sm:text-lg md:text-xl text-blue-700 font-semibold">Welcome to the next generation of attendance — secure, fast, and fair for everyone.</p>
+        <p className="text-base sm:text-lg md:text-xl text-gray-700">
+          Say goodbye to proxies and paper registers. Experience digital card-based attendance like never before.
+        </p>
+        <div className="mt-6 flex flex-col sm:flex-row gap-4 justify-center md:justify-start w-full">
+          <button className="w-full sm:w-auto px-6 sm:px-8 py-3 sm:py-4 bg-gradient-to-r from-blue-600 to-cyan-500 hover:from-blue-700 hover:to-cyan-600 text-white rounded-2xl font-bold shadow-xl flex items-center justify-center gap-3 text-lg sm:text-xl transition-all animate-bounce">
+            🚀 Get Started
+          </button>
+          <button className="w-full sm:w-auto px-6 sm:px-8 py-3 sm:py-4 border-2 border-blue-300 rounded-2xl bg-white hover:bg-blue-50 text-blue-700 font-bold shadow-md transition-all text-lg sm:text-xl">
+            Learn More
+          </button>
         </div>
       </div>
-    </section>
+      {/* Right: Hero Image with shadow and rounded corners */}
+      <div className="w-full md:w-[420px] h-[260px] sm:h-[320px] md:h-[420px] flex items-center justify-center mt-12 md:mt-0 z-10" data-aos="zoom-in">
+        <div className="bg-white rounded-2xl shadow-2xl p-2 sm:p-4 border-2 border-blue-100 w-full h-full flex items-center justify-center">
+          <img
+            src="/hero-image.png"
+            alt="Hero"
+            className="w-full h-full object-contain rounded-xl"
+          />
+        </div>
+      </div>
+    </div>
   );
-};
+}
 
-export default HeroSection;
