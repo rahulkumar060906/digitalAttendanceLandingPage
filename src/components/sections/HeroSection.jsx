@@ -4,7 +4,7 @@ import useAOS from '../../hooks/useAOS';
 export default function HeroSection(props) {
   useAOS();
   return (
-    <div className="relative min-h-screen flex flex-col md:flex-row items-center justify-between px-4 sm:px-6 lg:px-20 bg-gradient-to-br from-blue-50 via-white to-cyan-100 text-gray-900 overflow-hidden">
+    <div className="relative min-h-screen flex flex-col md:flex-row items-center justify-between px-4 sm:px-6 lg:px-20 bg-gradient-to-br from-blue-50 via-white to-cyan-100 text-gray-900 overflow-hidden pt-20 sm:pt-24">
       {/* Animated Background Shapes */}
       <div className="absolute top-0 left-0 w-2/3 sm:w-1/2 h-1/2 bg-gradient-to-br from-blue-300 to-cyan-200 rounded-full blur-3xl opacity-30 animate-pulse" style={{ zIndex: 0 }}></div>
       <div className="absolute bottom-0 right-0 w-1/2 sm:w-1/3 h-1/3 bg-gradient-to-br from-cyan-300 to-blue-200 rounded-full blur-2xl opacity-20 animate-pulse" style={{ zIndex: 0 }}></div>
